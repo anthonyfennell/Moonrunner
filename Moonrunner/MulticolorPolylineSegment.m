@@ -11,10 +11,8 @@
 
 @interface MulticolorPolylineSegment ()
 
-
 @end
 
 @implementation MulticolorPolylineSegment
-
 
 @end

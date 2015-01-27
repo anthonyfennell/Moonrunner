@@ -196,7 +196,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     if (buttonIndex == 0) {
         self.run = [[AppModel sharedModel] saveRunDistance:self.distance
                                                   duration:self.seconds
-                                                 locations:self.locations];
+                                                 locations:self.locations driving:self.isADrive];
         NSLog(@"Locations after save: %ld", self.run.locations.count);
         [self performSegueWithIdentifier:detialSegueName sender:self];
     } else if (buttonIndex == 1) {

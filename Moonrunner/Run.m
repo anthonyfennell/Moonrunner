@@ -12,9 +12,10 @@
 
 @implementation Run
 
-@dynamic timestamp;
 @dynamic distance;
 @dynamic duration;
+@dynamic timestamp;
+@dynamic isDriving;
 @dynamic locations;
 
 @end

@@ -13,9 +13,10 @@
 
 @interface Run : NSManagedObject
 
-@property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) NSNumber * distance;
 @property (nonatomic, retain) NSNumber * duration;
+@property (nonatomic, retain) NSDate * timestamp;
+@property (nonatomic, retain) NSNumber * isDriving;
 @property (nonatomic, retain) NSOrderedSet *locations;
 @end
 

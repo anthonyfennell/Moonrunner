@@ -48,7 +48,7 @@
     self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@",
                            [[AppModel sharedModel] stringifyAvgPaceFromDist:self.run.distance.floatValue
                                                                    overTime:self.run.duration.intValue
-                                                                    driving:NO]];
+                                                                    driving:self.run.isDriving]];
     [self loadMap];
 }
 

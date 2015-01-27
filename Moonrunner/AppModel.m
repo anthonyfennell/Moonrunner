@@ -77,13 +77,14 @@ static double const metersInMile = 1609.344;
 }
 
 
-- (Run *)saveRunDistance:(float)distance duration:(int)duration locations:(NSArray *)locations
+- (Run *)saveRunDistance:(float)distance duration:(int)duration locations:(NSArray *)locations driving:(BOOL)isDriving
 {
     Run *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run"
                                                 inManagedObjectContext:context];
     newRun.distance = [NSNumber numberWithFloat:distance];
     newRun.duration = [NSNumber numberWithInt:duration];
     newRun.timestamp = [NSDate date];
+    newRun.isDriving = [NSNumber numberWithBool:isDriving];
     
     NSMutableArray *locationsArray = [NSMutableArray array];
     for (CLLocation *location in locations) {
@@ -106,7 +107,25 @@ static double const metersInMile = 1609.344;
     return newRun;
 }
 
+- (NSArray *)fetchRuns
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
 
+    NSEntityDescription *e = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:context];
+    request.entity = e;
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:YES];
+    [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+
+    NSError *error;
+    NSArray *result = [context executeFetchRequest:request
+                                         error:&error];
+    if (!result) {
+        [NSException raise:@"Fetch failed"
+                format:@"Reason: %@", [error localizedDescription]];
+    }
+
+    return result;
+}
 
 
 
@@ -282,6 +301,9 @@ static double const metersInMile = 1609.344;
     
     return colorSegments;
 }
+
+
+
 
 @end
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46FD67F11A772B740073D832 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FD67F01A772B740073D832 /* Run.m */; };
+		46FD67F41A772CFF0073D832 /* RunTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FD67F31A772CFF0073D832 /* RunTableViewController.m */; };
 		8FB969C61A7670DF00F9266F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969C51A7670DF00F9266F /* main.m */; };
 		8FB969C91A7670DF00F9266F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969C81A7670DF00F9266F /* AppDelegate.m */; };
 		8FB969CC1A7670DF00F9266F /* Moonrunner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969CA1A7670DF00F9266F /* Moonrunner.xcdatamodeld */; };
@@ -17,7 +19,6 @@
 		8FB969DA1A7670DF00F9266F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB969D81A7670DF00F9266F /* LaunchScreen.xib */; };
 		8FB969E61A7670DF00F9266F /* MoonrunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969E51A7670DF00F9266F /* MoonrunnerTests.m */; };
 		8FB969F21A7671EC00F9266F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969F11A7671EC00F9266F /* Location.m */; };
-		8FB969F51A7671ED00F9266F /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969F41A7671ED00F9266F /* Run.m */; };
 		8FB969F71A76720B00F9266F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB969F61A76720B00F9266F /* MapKit.framework */; };
 		8FB969F91A76721500F9266F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB969F81A76721500F9266F /* CoreGraphics.framework */; };
 		8FB969FB1A76721E00F9266F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB969FA1A76721E00F9266F /* CoreData.framework */; };
@@ -40,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46FD67EF1A772B740073D832 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
+		46FD67F01A772B740073D832 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
+		46FD67F21A772CFF0073D832 /* RunTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTableViewController.h; sourceTree = "<group>"; };
+		46FD67F31A772CFF0073D832 /* RunTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTableViewController.m; sourceTree = "<group>"; };
 		8FB969C01A7670DF00F9266F /* Moonrunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonrunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB969C41A7670DF00F9266F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FB969C51A7670DF00F9266F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,8 +63,6 @@
 		8FB969E51A7670DF00F9266F /* MoonrunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoonrunnerTests.m; sourceTree = "<group>"; };
 		8FB969F01A7671EC00F9266F /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		8FB969F11A7671EC00F9266F /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		8FB969F31A7671ED00F9266F /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
-		8FB969F41A7671ED00F9266F /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
 		8FB969F61A76720B00F9266F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8FB969F81A76721500F9266F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8FB969FA1A76721E00F9266F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -163,8 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				8FB969CA1A7670DF00F9266F /* Moonrunner.xcdatamodeld */,
-				8FB969F31A7671ED00F9266F /* Run.h */,
-				8FB969F41A7671ED00F9266F /* Run.m */,
+				46FD67EF1A772B740073D832 /* Run.h */,
+				46FD67F01A772B740073D832 /* Run.m */,
 				8FB969F01A7671EC00F9266F /* Location.h */,
 				8FB969F11A7671EC00F9266F /* Location.m */,
 			);
@@ -196,6 +199,8 @@
 				8FB96A021A767B8500F9266F /* DetailViewController.m */,
 				8FB96A0B1A76ABD000F9266F /* MulticolorPolylineSegment.h */,
 				8FB96A0C1A76ABD000F9266F /* MulticolorPolylineSegment.m */,
+				46FD67F21A772CFF0073D832 /* RunTableViewController.h */,
+				46FD67F31A772CFF0073D832 /* RunTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -316,12 +321,13 @@
 			files = (
 				8FB969D21A7670DF00F9266F /* NewRunViewController.m in Sources */,
 				8FB969CF1A7670DF00F9266F /* HomeViewController.m in Sources */,
-				8FB969F51A7671ED00F9266F /* Run.m in Sources */,
 				8FB969C91A7670DF00F9266F /* AppDelegate.m in Sources */,
 				8FB96A031A767B8500F9266F /* DetailViewController.m in Sources */,
 				8FB969CC1A7670DF00F9266F /* Moonrunner.xcdatamodeld in Sources */,
+				46FD67F41A772CFF0073D832 /* RunTableViewController.m in Sources */,
 				8FB96A081A767EF200F9266F /* AppModel.m in Sources */,
 				8FB96A0D1A76ABD000F9266F /* MulticolorPolylineSegment.m in Sources */,
+				46FD67F11A772B740073D832 /* Run.m in Sources */,
 				8FB969F21A7671EC00F9266F /* Location.m in Sources */,
 				8FB969C61A7670DF00F9266F /* main.m in Sources */,
 			);
@@ -514,6 +520,7 @@
 				8FB969EB1A7670DF00F9266F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FB969EC1A7670DF00F9266F /* Build configuration list for PBXNativeTarget "MoonrunnerTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +529,7 @@
 				8FB969EE1A7670DF00F9266F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

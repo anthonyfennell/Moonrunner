@@ -14,7 +14,8 @@
 
 + (instancetype)sharedModel;
 
-- (Run *)saveRunDistance:(float)distance duration:(int)duration locations:(NSArray *)locations;
+- (Run *)saveRunDistance:(float)distance duration:(int)duration locations:(NSArray *)locations driving:(BOOL)isDriving;
+- (NSArray *)fetchRuns;
 
 - (NSString *)stringifyDistance:(double)meters;
 - (NSString *)stringifySecondCount:(int)seconds usingLongFormat:(BOOL)longFormat;
