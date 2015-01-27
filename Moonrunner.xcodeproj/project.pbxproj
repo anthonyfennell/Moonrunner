@@ -10,12 +10,23 @@
 		8FB969C61A7670DF00F9266F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969C51A7670DF00F9266F /* main.m */; };
 		8FB969C91A7670DF00F9266F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969C81A7670DF00F9266F /* AppDelegate.m */; };
 		8FB969CC1A7670DF00F9266F /* Moonrunner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969CA1A7670DF00F9266F /* Moonrunner.xcdatamodeld */; };
-		8FB969CF1A7670DF00F9266F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969CE1A7670DF00F9266F /* MasterViewController.m */; };
-		8FB969D21A7670DF00F9266F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969D11A7670DF00F9266F /* DetailViewController.m */; };
+		8FB969CF1A7670DF00F9266F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969CE1A7670DF00F9266F /* HomeViewController.m */; };
+		8FB969D21A7670DF00F9266F /* NewRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969D11A7670DF00F9266F /* NewRunViewController.m */; };
 		8FB969D51A7670DF00F9266F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB969D31A7670DF00F9266F /* Main.storyboard */; };
 		8FB969D71A7670DF00F9266F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB969D61A7670DF00F9266F /* Images.xcassets */; };
 		8FB969DA1A7670DF00F9266F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB969D81A7670DF00F9266F /* LaunchScreen.xib */; };
 		8FB969E61A7670DF00F9266F /* MoonrunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969E51A7670DF00F9266F /* MoonrunnerTests.m */; };
+		8FB969F21A7671EC00F9266F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969F11A7671EC00F9266F /* Location.m */; };
+		8FB969F51A7671ED00F9266F /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB969F41A7671ED00F9266F /* Run.m */; };
+		8FB969F71A76720B00F9266F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB969F61A76720B00F9266F /* MapKit.framework */; };
+		8FB969F91A76721500F9266F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB969F81A76721500F9266F /* CoreGraphics.framework */; };
+		8FB969FB1A76721E00F9266F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB969FA1A76721E00F9266F /* CoreData.framework */; };
+		8FB969FD1A76722500F9266F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB969FC1A76722500F9266F /* UIKit.framework */; };
+		8FB969FF1A76723300F9266F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB969FE1A76723300F9266F /* Foundation.framework */; };
+		8FB96A031A767B8500F9266F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB96A021A767B8500F9266F /* DetailViewController.m */; };
+		8FB96A081A767EF200F9266F /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB96A071A767EF200F9266F /* AppModel.m */; };
+		8FB96A0A1A7688A000F9266F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB96A091A7688A000F9266F /* CoreLocation.framework */; };
+		8FB96A0D1A76ABD000F9266F /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB96A0C1A76ABD000F9266F /* MulticolorPolylineSegment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,16 +46,32 @@
 		8FB969C71A7670DF00F9266F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8FB969C81A7670DF00F9266F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8FB969CB1A7670DF00F9266F /* Moonrunner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moonrunner.xcdatamodel; sourceTree = "<group>"; };
-		8FB969CD1A7670DF00F9266F /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		8FB969CE1A7670DF00F9266F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		8FB969D01A7670DF00F9266F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		8FB969D11A7670DF00F9266F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8FB969CD1A7670DF00F9266F /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8FB969CE1A7670DF00F9266F /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		8FB969D01A7670DF00F9266F /* NewRunViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRunViewController.h; sourceTree = "<group>"; };
+		8FB969D11A7670DF00F9266F /* NewRunViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRunViewController.m; sourceTree = "<group>"; };
 		8FB969D41A7670DF00F9266F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FB969D61A7670DF00F9266F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8FB969D91A7670DF00F9266F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8FB969DF1A7670DF00F9266F /* MoonrunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonrunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB969E41A7670DF00F9266F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FB969E51A7670DF00F9266F /* MoonrunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoonrunnerTests.m; sourceTree = "<group>"; };
+		8FB969F01A7671EC00F9266F /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		8FB969F11A7671EC00F9266F /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		8FB969F31A7671ED00F9266F /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
+		8FB969F41A7671ED00F9266F /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
+		8FB969F61A76720B00F9266F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8FB969F81A76721500F9266F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8FB969FA1A76721E00F9266F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8FB969FC1A76722500F9266F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8FB969FE1A76723300F9266F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8FB96A011A767B8500F9266F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8FB96A021A767B8500F9266F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8FB96A061A767EF200F9266F /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
+		8FB96A071A767EF200F9266F /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
+		8FB96A091A7688A000F9266F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8FB96A0B1A76ABD000F9266F /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
+		8FB96A0C1A76ABD000F9266F /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +79,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB96A0A1A7688A000F9266F /* CoreLocation.framework in Frameworks */,
+				8FB969FF1A76723300F9266F /* Foundation.framework in Frameworks */,
+				8FB969FD1A76722500F9266F /* UIKit.framework in Frameworks */,
+				8FB969FB1A76721E00F9266F /* CoreData.framework in Frameworks */,
+				8FB969F91A76721500F9266F /* CoreGraphics.framework in Frameworks */,
+				8FB969F71A76720B00F9266F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +101,7 @@
 		8FB969B71A7670DF00F9266F = {
 			isa = PBXGroup;
 			children = (
+				8FB96A001A76723D00F9266F /* Frameworks */,
 				8FB969C21A7670DF00F9266F /* Moonrunner */,
 				8FB969E21A7670DF00F9266F /* MoonrunnerTests */,
 				8FB969C11A7670DF00F9266F /* Products */,
@@ -88,14 +122,12 @@
 			children = (
 				8FB969C71A7670DF00F9266F /* AppDelegate.h */,
 				8FB969C81A7670DF00F9266F /* AppDelegate.m */,
-				8FB969CD1A7670DF00F9266F /* MasterViewController.h */,
-				8FB969CE1A7670DF00F9266F /* MasterViewController.m */,
-				8FB969D01A7670DF00F9266F /* DetailViewController.h */,
-				8FB969D11A7670DF00F9266F /* DetailViewController.m */,
+				8FB96A051A767ED800F9266F /* Models */,
+				8FB969EF1A7670E800F9266F /* MoGen */,
+				8FB96A041A767EC000F9266F /* View Controllers */,
 				8FB969D31A7670DF00F9266F /* Main.storyboard */,
 				8FB969D61A7670DF00F9266F /* Images.xcassets */,
 				8FB969D81A7670DF00F9266F /* LaunchScreen.xib */,
-				8FB969CA1A7670DF00F9266F /* Moonrunner.xcdatamodeld */,
 				8FB969C31A7670DF00F9266F /* Supporting Files */,
 			);
 			path = Moonrunner;
@@ -125,6 +157,56 @@
 				8FB969E41A7670DF00F9266F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FB969EF1A7670E800F9266F /* MoGen */ = {
+			isa = PBXGroup;
+			children = (
+				8FB969CA1A7670DF00F9266F /* Moonrunner.xcdatamodeld */,
+				8FB969F31A7671ED00F9266F /* Run.h */,
+				8FB969F41A7671ED00F9266F /* Run.m */,
+				8FB969F01A7671EC00F9266F /* Location.h */,
+				8FB969F11A7671EC00F9266F /* Location.m */,
+			);
+			name = MoGen;
+			sourceTree = "<group>";
+		};
+		8FB96A001A76723D00F9266F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FB96A091A7688A000F9266F /* CoreLocation.framework */,
+				8FB969FE1A76723300F9266F /* Foundation.framework */,
+				8FB969FC1A76722500F9266F /* UIKit.framework */,
+				8FB969FA1A76721E00F9266F /* CoreData.framework */,
+				8FB969F81A76721500F9266F /* CoreGraphics.framework */,
+				8FB969F61A76720B00F9266F /* MapKit.framework */,
+			);
+			name = Frameworks;
+			path = Moonrunner;
+			sourceTree = "<group>";
+		};
+		8FB96A041A767EC000F9266F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8FB969CD1A7670DF00F9266F /* HomeViewController.h */,
+				8FB969CE1A7670DF00F9266F /* HomeViewController.m */,
+				8FB969D01A7670DF00F9266F /* NewRunViewController.h */,
+				8FB969D11A7670DF00F9266F /* NewRunViewController.m */,
+				8FB96A011A767B8500F9266F /* DetailViewController.h */,
+				8FB96A021A767B8500F9266F /* DetailViewController.m */,
+				8FB96A0B1A76ABD000F9266F /* MulticolorPolylineSegment.h */,
+				8FB96A0C1A76ABD000F9266F /* MulticolorPolylineSegment.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8FB96A051A767ED800F9266F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8FB96A061A767EF200F9266F /* AppModel.h */,
+				8FB96A071A767EF200F9266F /* AppModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +258,11 @@
 				TargetAttributes = {
 					8FB969BF1A7670DF00F9266F = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					8FB969DE1A7670DF00F9266F = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -227,10 +314,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FB969D21A7670DF00F9266F /* DetailViewController.m in Sources */,
-				8FB969CF1A7670DF00F9266F /* MasterViewController.m in Sources */,
+				8FB969D21A7670DF00F9266F /* NewRunViewController.m in Sources */,
+				8FB969CF1A7670DF00F9266F /* HomeViewController.m in Sources */,
+				8FB969F51A7671ED00F9266F /* Run.m in Sources */,
 				8FB969C91A7670DF00F9266F /* AppDelegate.m in Sources */,
+				8FB96A031A767B8500F9266F /* DetailViewController.m in Sources */,
 				8FB969CC1A7670DF00F9266F /* Moonrunner.xcdatamodeld in Sources */,
+				8FB96A081A767EF200F9266F /* AppModel.m in Sources */,
+				8FB96A0D1A76ABD000F9266F /* MulticolorPolylineSegment.m in Sources */,
+				8FB969F21A7671EC00F9266F /* Location.m in Sources */,
 				8FB969C61A7670DF00F9266F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
