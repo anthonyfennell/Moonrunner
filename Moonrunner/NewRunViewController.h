@@ -10,7 +10,7 @@
 
 @interface NewRunViewController : UIViewController
 
-@property (nonatomic) BOOL isADrive;
+@property (nonatomic) BOOL isDriving;
 
 @end
 

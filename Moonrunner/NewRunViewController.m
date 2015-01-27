@@ -64,6 +64,7 @@ static NSString * const detialSegueName = @"RunDetails";
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    [self.locationManager stopUpdatingLocation];
     [self.timer invalidate];
 }
 
@@ -84,7 +85,7 @@ static NSString * const detialSegueName = @"RunDetails";
     self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@",
                            [[AppModel sharedModel] stringifyAvgPaceFromDist:self.distance
                                                                    overTime:self.seconds
-                                                                    driving:self.isADrive]];
+                                                                    driving:self.isDriving]];
 }
 
 - (void)startLocationUpdates
@@ -94,11 +95,16 @@ static NSString * const detialSegueName = @"RunDetails";
         [self.locationManager requestAlwaysAuthorization];
     }
     self.locationManager.delegate = self;
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    self.locationManager.activityType = CLActivityTypeFitness;
-    
+    if (self.isDriving) {
+        self.locationManager.activityType = CLActivityTypeAutomotiveNavigation;
+        self.locationManager.distanceFilter = 12; // meters
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    } else {
+        self.locationManager.activityType = CLActivityTypeFitness;
+        self.locationManager.distanceFilter = 5; // meters
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    }
     // Movement threshold for new events
-    self.locationManager.distanceFilter = 5; // meters
     [self.locationManager startUpdatingLocation];
 }
 
@@ -192,12 +198,10 @@ static NSString * const detialSegueName = @"RunDetails";
 clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     // save
-    NSLog(@"Locations : %ld", self.locations.count);
     if (buttonIndex == 0) {
         self.run = [[AppModel sharedModel] saveRunDistance:self.distance
                                                   duration:self.seconds
-                                                 locations:self.locations driving:self.isADrive];
-        NSLog(@"Locations after save: %ld", self.run.locations.count);
+                                                 locations:self.locations driving:self.isDriving];
         [self performSegueWithIdentifier:detialSegueName sender:self];
     } else if (buttonIndex == 1) {
         [self.navigationController popToRootViewControllerAnimated:YES];

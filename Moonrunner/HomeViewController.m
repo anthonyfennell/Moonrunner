@@ -12,6 +12,7 @@
 #import "AppModel.h"
 
 static NSString * const driveSegueName = @"StartDrive";
+static NSString * const pastRunsSegueName  = @"PastRuns";
 
 @interface HomeViewController ()
 
@@ -21,11 +22,18 @@ static NSString * const driveSegueName = @"StartDrive";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [[segue destinationViewController] setIsADrive:NO];
+    if ([segue.description isEqualToString:driveSegueName]) {
+        NewRunViewController *newRunVC = [[[segue destinationViewController] viewControllers] firstObject];
+        [newRunVC setIsDriving:YES];
+    }
 }
 
 - (IBAction)newDriveButtonTapped:(id)sender {
     [self performSegueWithIdentifier:driveSegueName sender:self];
+}
+
+- (IBAction)pastRunsButtonTapped:(id)sender {
+    [self performSegueWithIdentifier:pastRunsSegueName sender:self];
 }
 
 - (void)awakeFromNib {

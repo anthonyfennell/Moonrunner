@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -74,6 +74,9 @@
                                 <state key="normal" title="Past Runs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pastRunsButtonTapped:" destination="B6s-DY-ZjW" eventType="touchUpInside" id="xRa-Af-anh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEB-Vo-5zT">
                                 <rect key="frame" x="234" y="321" width="132" height="39"/>
@@ -107,7 +110,7 @@
                     <navigationItem key="navigationItem" id="YyZ-AF-GUx"/>
                     <connections>
                         <segue destination="Ah7-4n-0Wa" kind="show" identifier="StartDrive" id="9DC-7K-AQZ"/>
-                        <segue destination="iuD-Cz-gVa" kind="show" id="uST-1U-Tzr"/>
+                        <segue destination="iuD-Cz-gVa" kind="show" identifier="PastRuns" id="uST-1U-Tzr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ia2-8g-2ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,7 +338,7 @@
                             <constraint firstItem="uFE-2b-NDb" firstAttribute="centerX" secondItem="7wd-0e-1gY" secondAttribute="centerX" id="zZa-fO-y6F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" id="cra-N8-TIN"/>
                     <connections>
                         <outlet property="distLabel" destination="uFE-2b-NDb" id="pMn-Al-BMN"/>
                         <outlet property="mapView" destination="WdC-bt-l0w" id="3nS-LI-uVB"/>
@@ -372,6 +375,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="9DC-7K-AQZ"/>
-        <segue reference="Z0E-so-nXc"/>
+        <segue reference="v3S-wa-LsT"/>
     </inferredMetricsTieBreakers>
 </document>

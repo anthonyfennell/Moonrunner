@@ -14,15 +14,17 @@ static NSString * const RunTableToDetail = @"RunTableToDetailView";
 @interface RunTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *runs;
 @property int row;
 
 @end
 
 @implementation RunTableViewController
 
-- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    UINavigationController *navController = [segue destinationViewController];
+    [[[navController viewControllers] firstObject] setRun:[self.runs objectAtIndex:self.row]];
 }
 
 
@@ -31,21 +33,20 @@ static NSString * const RunTableToDetail = @"RunTableToDetailView";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    _runs = [[AppModel sharedModel] fetchRuns];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [[[AppModel sharedModel] fetchRuns] count];
+    return [self.runs count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray * runs = [[AppModel sharedModel] fetchRuns];
-    Run *run = [runs objectAtIndex:indexPath.row];
+    Run *run = [self.runs objectAtIndex:indexPath.row];
     NSString *time = [NSString stringWithFormat:@"Time: %@",
                       [[AppModel sharedModel] stringifySecondCount:run.duration.intValue usingLongFormat:YES]];
     NSString *pace = [NSString stringWithFormat:@"Pace: %@",
